@@ -26,7 +26,7 @@
         .btn-back {
             background-color: #fff;
             color: #000;
-            border: 1px solid #fff;
+            border: 1px solid #dee2e6; /* Added slight border for visibility */
             font-weight: 600;
             padding: 0.6rem 1.8rem;
         }
@@ -44,8 +44,9 @@
             max-width: 700px;
         }
 
+        /* CHANGED: Green -> Blue */
         .card-header-custom {
-            background-color: #198754;
+            background-color: #0d6efd; /* Same blue as navbar */
             color: white;
             font-weight: 700;
             font-size: 1.3rem;
@@ -76,6 +77,7 @@
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh; padding-top: 56px;">
     <div class="card card-custom mx-auto">
 
+        <!-- Header is now Blue -->
         <div class="card-header-custom">
             How was your experience?
         </div>
@@ -108,7 +110,8 @@
                     <a href="/employee/dashboard" class="btn btn-back">
                         Cancel
                     </a>
-                    <button type="submit" class="btn btn-success btn-lg btn-submit">
+                    <!-- CHANGED: btn-success -> btn-primary (Blue) -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
                         <i class="fas fa-paper-plane me-2"></i>Submit Feedback
                     </button>
                 </div>

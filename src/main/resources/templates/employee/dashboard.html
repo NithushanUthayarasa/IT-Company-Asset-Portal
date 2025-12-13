@@ -324,16 +324,7 @@
                                 <label class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="fullName" th:value="${profile.fullName}" required>
                             </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-bold">Department <span class="text-danger">*</span></label>
-                                <select class="form-select" name="department">
-                                    <option value="IT" th:selected="${profile.department == 'IT'}">IT</option>
-                                    <option value="HR" th:selected="${profile.department == 'HR'}">HR</option>
-                                    <option value="Finance" th:selected="${profile.department == 'Finance'}">Finance</option>
-                                    <option value="Marketing" th:selected="${profile.department == 'Marketing'}">Marketing</option>
-                                    <option value="Operations" th:selected="${profile.department == 'Operations'}">Operations</option>
-                                </select>
-                            </div>
+                          
                             <div class="col-12">
                                 <label class="form-label fw-bold">Phone Number</label>
                                 <input type="tel" class="form-control" name="phone" th:value="${profile.phone}">
