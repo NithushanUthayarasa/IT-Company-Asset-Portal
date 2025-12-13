@@ -1,6 +1,7 @@
 package com.example.itassetmanagement.service;
 
 import com.example.itassetmanagement.model.*;
+import com.example.itassetmanagement.model.enums.EmployeeStatus;
 import com.example.itassetmanagement.model.enums.Role;
 import com.example.itassetmanagement.model.enums.TicketStatus;
 import com.example.itassetmanagement.repository.*;
@@ -8,11 +9,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import com.example.itassetmanagement.model.enums.EmployeeStatus;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional  // ← FIXED: Removed readOnly = true
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
@@ -53,7 +54,6 @@ public class EmployeeService {
                 .filter(t -> t.getStatus() == TicketStatus.OPEN)
                 .count();
     }
-    // Add these methods to your existing EmployeeService.java
 
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
@@ -75,9 +75,11 @@ public class EmployeeService {
         return employeeRepository.findByStatus(EmployeeStatus.PENDING);
     }
 
+    @Transactional  // Ensures write transaction
     public void approveEmployee(Long id) {
         Employee emp = findById(id);
         emp.setStatus(EmployeeStatus.APPROVED);
+        emp.setApprovedAt(LocalDateTime.now());  // Optional: record approval time
         employeeRepository.save(emp);
     }
 
@@ -103,7 +105,6 @@ public class EmployeeService {
     @Transactional
     public void resetAllUsers(PasswordEncoder encoder) {
         employeeRepository.deleteAll();
-        // create admin + sample user – same as your old code
-        // ... (you can copy your old reset logic here)
+        // Your original admin creation logic here if needed
     }
 }

@@ -16,7 +16,7 @@ public class AdminController {
     private final AssignmentService assignmentService;
     private final MaintenanceService maintenanceService;
     private final FeedbackService feedbackService;
-    private final TicketService ticketService;        // ← NEW
+    private final TicketService ticketService;
     private final PasswordEncoder passwordEncoder;
 
     public AdminController(EmployeeService employeeService,
@@ -42,7 +42,6 @@ public class AdminController {
         model.addAttribute("assetCount", assetService.countAll());
         model.addAttribute("assignmentCount", assignmentService.countAll());
 
-        // NEW: Real ticket counts on dashboard
         model.addAttribute("totalTickets", ticketService.getAllTickets().size());
         model.addAttribute("openTickets", ticketService.getOpenTickets().size());
         model.addAttribute("totalEmployees", employeeService.countAll());
@@ -90,16 +89,17 @@ public class AdminController {
         return "redirect:/admin/employees";
     }
 
-    @GetMapping("/users/pending")
+    // ======================= PENDING USERS (SUPPORTS BOTH OLD & NEW URL) =======================
+    @GetMapping({"/users/pending", "/employees/pending"})
     public String listPendingUsers(Model model) {
         model.addAttribute("employees", employeeService.getPendingEmployees());
-        return "admin/employees/pending";
+        return "admin/employees/pending";  // Always loads your beautiful dynamic template
     }
 
-    @PostMapping("/users/pending/approve/{id}")
+    @PostMapping({"/users/pending/approve/{id}", "/employees/pending/approve/{id}"})
     public String approveUser(@PathVariable Long id) {
         employeeService.approveEmployee(id);
-        return "redirect:/admin/users/pending?approved=true";
+        return "redirect:/admin/employees/pending?approved=true";  // Clean redirect
     }
 
     // ========================= ASSETS =========================
@@ -241,7 +241,6 @@ public class AdminController {
         return "redirect:/admin/debug/users?reset=success";
     }
 
-    // ========================= TICKETS (NEW - ADMIN CAN SEE ALL) =========================
     // ========================= TICKETS (ADMIN) =========================
     @GetMapping("/tickets")
     public String listAllTickets(Model model) {
@@ -251,7 +250,6 @@ public class AdminController {
 
     @GetMapping("/tickets/{id}")
     public String viewTicketDetail(@PathVariable Long id, Model model) {
-        // FIXED: Use correct method name
         model.addAttribute("ticket", ticketService.getTicketWithDetails(id));
         model.addAttribute("comment", new TicketComment());
         return "admin/tickets/view";

@@ -9,18 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts (Poppins for Headings, Inter for body) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <!-- Animate.css for smooth entrance animations -->
+    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
         :root {
-            /* Advanced Blue Gradient */
-            --primary-gradient: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
-            --primary-solid: #206dfb;
+            /* Bootstrap Default Primary Blue Theme */
+            --primary-gradient: linear-gradient(135deg, #0d6efd 0%, #0d6efd 50%, #4198ff 100%);
+            --primary-solid: #0d6efd;        /* Bootstrap primary blue */
+            --primary-light: #4198ff;        /* Lighter variant for gradient */
+            --primary-dark: #0b5ed7;         /* Darker shade for hover/shadow */
             --dark-blue: #0f172a;
-            --light-bg: #f8faff;
+            --light-bg: #f8f9fa;             /* Matches login page background */
             --text-main: #334155;
             --text-muted: #64748b;
         }
@@ -47,7 +49,6 @@
             overflow: hidden;
         }
 
-        /* Abstract Background Shapes for "Advanced" look */
         .hero::before {
             content: '';
             position: absolute;
@@ -55,7 +56,7 @@
             left: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
             border-radius: 50%;
             z-index: 0;
         }
@@ -68,7 +69,7 @@
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 20px;
         }
 
@@ -80,7 +81,7 @@
             margin: 0 auto 40px auto;
         }
 
-        /* Glassmorphism Buttons */
+        /* Buttons */
         .btn-custom {
             padding: 14px 40px;
             font-weight: 600;
@@ -88,19 +89,18 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.8);
         }
 
         .btn-filled {
             background: white;
             color: var(--primary-solid);
             border: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
         }
 
         .btn-filled:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 15px 30px rgba(13, 110, 253, 0.3);
             color: var(--primary-solid);
             background: #fff;
         }
@@ -113,13 +113,13 @@
         }
 
         .btn-outline:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.25);
             transform: translateY(-3px);
             color: white;
             border-color: white;
         }
 
-        /* SVG Curve Separator */
+        /* Wave Separator */
         .wave-separator {
             position: absolute;
             bottom: 0;
@@ -149,19 +149,17 @@
             transition: all 0.4s ease;
             height: 100%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            position: relative;
-            z-index: 1;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(32, 109, 251, 0.1); /* Blue glow shadow */
+            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15); /* Bootstrap blue shadow */
         }
 
         .icon-wrapper {
             width: 70px;
             height: 70px;
-            background: rgba(32, 109, 251, 0.08);
+            background: rgba(13, 110, 253, 0.1);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -192,17 +190,12 @@
             color: var(--dark-blue);
             font-weight: 600;
             padding: 20px 25px;
-            box-shadow: none !important;
         }
 
         .accordion-button:not(.collapsed) {
-            background-color: #eff6ff;
+            background-color: #e3f2ff;
             color: var(--primary-solid);
             border-bottom: 1px solid #e2e8f0;
-        }
-
-        .accordion-button::after {
-            background-size: 1rem;
         }
 
         /* --- FOOTER --- */
@@ -210,11 +203,14 @@
             background: var(--dark-blue);
             color: #94a3b8;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
         footer p { opacity: 0.7; }
 
+        /* Override Bootstrap's .text-primary to match */
+        .text-primary {
+            color: var(--primary-solid) !important;
+        }
     </style>
 </head>
 <body>
@@ -224,13 +220,12 @@
     <div class="container hero-content">
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <!-- Animate CSS classes for entrance -->
-                <h1 class="animate_animated animate_fadeInDown">IT Asset Tracking Portal</h1>
-                <p class="lead mb-5 animate_animated animatefadeInUp animate_delay-1s">
+                <h1 class="animate__animated animate__fadeInDown">IT Asset Tracking Portal</h1>
+                <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">
                     Empower your organization with efficient tracking. Manage laptops, monitors, software licenses, and employee assignments in one secure platform.
                 </p>
 
-                <div class="d-flex justify-content-center gap-4 flex-wrap animate_animated animatefadeInUp animate_delay-1s">
+                <div class="d-flex justify-content-center gap-4 flex-wrap animate__animated animate__fadeInUp animate__delay-1s">
                     <a href="/login" class="btn btn-filled btn-custom">
                         <i class="fas fa-sign-in-alt me-2"></i> Login Portal
                     </a>
@@ -242,7 +237,7 @@
         </div>
     </div>
 
-    <!-- Smooth Curve Wave -->
+    <!-- Wave Separator -->
     <div class="wave-separator">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
@@ -254,8 +249,7 @@
 <section class="py-5 bg-transparent" style="margin-top: -30px;">
     <div class="container">
         <div class="row text-center g-4">
-            <!-- Card 1 -->
-            <div class="col-md-4 animate_animated animatefadeInUp animate_delay-2s">
+            <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="feature-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-laptop-medical"></i>
@@ -264,8 +258,7 @@
                     <p class="text-muted small">Real-time inventory management for hardware and software. Know who has what, instantly.</p>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col-md-4 animate_animated animatefadeInUp animate_delay-2s">
+            <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="feature-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-user-shield"></i>
@@ -274,8 +267,7 @@
                     <p class="text-muted small">Secure approval workflows. Admins control access levels, ensuring data security.</p>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="col-md-4 animate_animated animatefadeInUp animate_delay-2s">
+            <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="feature-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-file-contract"></i>

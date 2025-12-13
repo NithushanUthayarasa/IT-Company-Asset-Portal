@@ -1,5 +1,9 @@
+// src/main/java/com/example/itassetmanagement/config/WebSecurityConfig.java
+
 package com.example.itassetmanagement.config;
 
+import com.example.itassetmanagement.config.CustomAuthenticationFailureHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,6 +13,10 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class WebSecurityConfig {
+
+    // Inject the custom failure handler we created
+    @Autowired
+    private CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -26,7 +34,7 @@ public class WebSecurityConfig {
                 // PERMIT THESE URLs WITHOUT LOGIN
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                "/",                     // ← landing page
+                                "/",                     // landing page
                                 "/home",
                                 "/index",
                                 "/auth/**",              // login, logout
@@ -40,12 +48,12 @@ public class WebSecurityConfig {
 
                 // FORM LOGIN CONFIG
                 .formLogin(form -> form
-                        .loginPage("/auth/login")                    // your login page
+                        .loginPage("/auth/login")                    // your custom login page
                         .loginProcessingUrl("/auth/login")
                         .usernameParameter("email")
                         .passwordParameter("password")
                         .successHandler((request, response, authentication) -> {
-                            // Save username in session (for your dashboards)
+                            // Save username in session for dashboards
                             request.getSession().setAttribute("username", authentication.getName());
 
                             String role = authentication.getAuthorities().iterator().next().getAuthority();
@@ -56,20 +64,20 @@ public class WebSecurityConfig {
                                 response.sendRedirect("/employee/dashboard");
                             }
                         })
-                        .failureUrl("/auth/login?error=true")
+                        .failureHandler(customAuthenticationFailureHandler)  // ← CUSTOM MESSAGE FOR PENDING USERS
                         .permitAll()
                 )
 
                 // LOGOUT → GO BACK TO LANDING PAGE
                 .logout(logout -> logout
                         .logoutUrl("/auth/logout")
-                        .logoutSuccessUrl("/")                      // ← BACK TO index.html
+                        .logoutSuccessUrl("/")
                         .invalidateHttpSession(true)
                         .deleteCookies("JSESSIONID")
                         .permitAll()
                 )
 
-                // For H2 console in dev
+                // For H2 console in dev (allows frames)
                 .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()));
 
         return http.build();
