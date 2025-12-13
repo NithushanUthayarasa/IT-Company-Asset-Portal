@@ -19,8 +19,8 @@
         }
         .register-card {
             width: 100%;
-            max-width: 380px; /* Made smaller (was 500px) */
-            border-radius: 16px;
+            max-width: 400px;
+            border-radius: 14px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
             background: white;
@@ -29,38 +29,40 @@
             background: #0d6efd;
             color: white;
             text-align: center;
-            padding: 1.5rem 1rem;
+            padding: 1.2rem 1rem;
         }
         .card-header h3 {
             font-weight: 600;
             margin: 0;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
         }
         .card-header i {
-            font-size: 1.6rem;
+            font-size: 1.25rem;
             margin-right: 8px;
         }
         .card-body {
-            padding: 2rem; /* Reduced from 2.5rem */
+            padding: 2rem;
         }
         .form-label {
             font-weight: 600;
             color: #1976d2;
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
         }
-        .form-control {
+        /* Applied style to both input and select dropdown */
+        .form-control, .form-select {
             border-radius: 8px;
-            padding: 0.65rem 0.9rem;
+            padding: 0.55rem 0.85rem;
             font-size: 0.95rem;
         }
         .btn-register {
             background: #0d6efd;
             border: none;
-            border-radius: 10px;
-            padding: 0.8rem;
+            border-radius: 8px;
+            padding: 0.6rem;
             font-size: 1rem;
             font-weight: 600;
+            margin-top: 10px;
         }
         .btn-register:hover {
             background: #0b5ed7;
@@ -78,6 +80,7 @@
             font-size: 0.85rem;
             color: #6c757d;
         }
+        p { margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
@@ -87,9 +90,8 @@
     </div>
     <div class="card-body">
         <!-- Success message -->
-        <div th:if="${param.success}" class="alert alert-success small-text text-center mb-3" role="alert">
-            <i class="fas fa-check-circle me-2"></i>
-            Account created! Awaiting admin approval.
+        <div th:if="${param.success}" class="alert alert-success small-text text-center py-2 mb-3" role="alert">
+            <i class="fas fa-check-circle me-1"></i> Account created!
         </div>
 
         <form th:action="@{/register}" method="post">
@@ -105,12 +107,26 @@
                 <label class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" required>
             </div>
+
+            <!-- Updated Department Dropdown -->
             <div class="mb-3">
                 <label class="form-label">Department</label>
-                <input type="text" name="department" class="form-control" placeholder="e.g. IT, HR">
+                <select name="department" class="form-select" required>
+                    <option value="" selected disabled>Select Department</option>
+                    <option value="DataScienceAI">DataScienceAI</option>
+                    <option value="SoftwareEngineering Department">SoftwareEngineering Department</option>
+                    <option value="Cybersecurity Department">Cybersecurity Department</option>
+                    <option value="Network Operations Center">Network Operations Center</option>
+                    <option value="IT Procurement Department">IT Procurement Department</option>
+                    <option value="IT Infrastructure Department">IT Infrastructure Department</option>
+                    <option value="Database Administration Department">Database Administration Department</option>
+                    <option value="HR Department">HR Department</option>
+                    <option value="Finance Department">Finance Department</option>
+                </select>
             </div>
-            <div class="mb-4">
-                <label class="form-label">Phone <span class="text-muted">(Optional)</span></label>
+
+            <div class="mb-3">
+                <label class="form-label">Phone <span class="text-muted" style="font-weight:normal; font-size: 0.8em;">(Optional)</span></label>
                 <input type="text" name="phone" class="form-control">
             </div>
 
