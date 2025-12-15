@@ -12,35 +12,36 @@
 
 ### 👨‍💼 Admin
 
-* ![Admin Dashboard](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_dashboard.png) **Admin Dashboard**
-* ![Asset Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Asset.png) **Asset Management**
-* ![Assignment Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Assignment.png) **Assignment Management**
-* ![Employee Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Employees.png) **Employee Management**
-* ![Maintenance Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Maintenance.png) **Maintenance Management**
-* ![Ticket Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_ticket.png) **Ticket Management**
-* ![Add Asset](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Addasset.png) **Add Asset**
-* ![Add Assignment](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Addassignment.png) **Add Assignment**
-* ![Pending Users](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_PendingUsers.png) **Pending Users**
+* [Admin Dashboard](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_dashboard.png)
+* [Asset Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Asset.png)
+* [Assignment Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Assignment.png)
+* [Employee Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Employees.png)
+* [Maintenance Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Maintenance.png)
+* [Ticket Management](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_ticket.png)
+* [Add Asset](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Addasset.png)
+* [Add Assignment](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_Addassignment.png)
+* [Pending Users](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Admin_PendingUsers.png)
 
 ### 👨‍💻 Employee
 
-* ![Employee Dashboard](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Dashboard.png) **Dashboard**
-* ![Assigned Assets](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Asset.png) **Assigned Assets**
-* ![Create Ticket](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_CreateTicket.png) **Create Ticket**
-* ![My Tickets](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Myticket.png) **My Tickets**
-* ![Feedback](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Feedback.png) **Feedback**
-* ![Assignments](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Assignments.png) **Assignments**
+* [Employee Dashboard](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Dashboard.png)
+* [Assigned Assets](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Asset.png)
+* [Create Ticket](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_CreateTicket.png)
+* [My Tickets](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Myticket.png)
+* [Feedback](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Feedback.png)
+* [Assignments](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Employee_Assignments.png)
 
 ### 🔐 Authentication
 
-* ![Login](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Login.png) **Login Page**
-* ![Register](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/registerpage.png) **Register Page**
+* [Login Page](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/Login.png)
+* [Register Page](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/registerpage.png)
 
 ### 🗄️ Database
 
-* ![PostgreSQL](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/PostgreSQL.png) **Database Screenshot**
+* [PostgreSQL Screenshot](https://github.com/NithushanUthayarasa/it-asset-tracking-portal-v2/blob/main/screenshots/PostgreSQL.png)
 
 ---
+
 
 ## 🎯 Purpose
 
