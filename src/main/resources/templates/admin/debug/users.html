@@ -26,9 +26,7 @@
     <!-- SUCCESS MESSAGE -->
     <div th:if="${param.reset}" class="alert alert-success text-center">
         <h4><i class="fas fa-check-circle"></i> Database Reset Successfully!</h4>
-        <p>Use these logins:</p>
-        <code>admin@company.com</code> → <strong>admin123</strong><br>
-        <code>john@company.com</code> → <strong>john123</strong>
+
     </div>
 
     <!-- DANGER ZONE: RESET ALL USERS -->
@@ -45,11 +43,7 @@
                 </button>
             </form>
             <hr>
-            <small class="text-muted">
-                After reset:<br>
-                <strong>Admin:</strong> <code>admin@company.com</code> / <code>admin123</code><br>
-                <strong>John:</strong> <code>john@company.com</code> / <code>john123</code>
-            </small>
+
         </div>
     </div>
 
