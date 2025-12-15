@@ -119,13 +119,13 @@ IT Asset Tracking Portal (ITAMS)
 │   ├── main/
 │   │   ├── java/com/example/itassettrackingportal/
 │   │   │   ├── config/          # Security & data initialization
-│   │   │   ├── controller/      # Admin, Employee, Asset, Ticket, Feedback
+│   │   │   ├── controller/      # Admin, Employee, Asset, Assignment,Ticket, Feedback,
 │   │   │   ├── model/           # Entities & enums
 │   │   │   ├── repository/      # JPA repositories
 │   │   │   ├── service/         # Business logic
 │   │   │   └── dto/             # DTOs
 │   │   ├── resources/
-│   │   │   ├── static/          # CSS, JS, images
+│   │   │   ├── static/          
 │   │   │   ├── templates/       # Thymeleaf templates
 │   │   │   │   ├── admin/
 │   │   │   │   ├── employee/
@@ -221,7 +221,7 @@ mvn spring-boot:run
 
 ## 📄 License
 
-This project is for **educational purposes only**.
+This project is for **educational and learning purposes only.**.
 
 ---
 
