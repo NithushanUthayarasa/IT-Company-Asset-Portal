@@ -1,6 +1,6 @@
-# **IT Asset Tracking Portal**
+# **IT Company Asset Portal**
 
-**I built the complete full-stack IT Asset Tracking Portal from scratch using Spring Boot, PostgreSQL, Thymeleaf, and Spring Security. The system centralizes IT asset tracking, assignments, ticketing, maintenance, and employee feedback, enhancing efficiency, accountability, and IT operations.**
+**I built the complete full-stack IT Company Asset Portal from scratch using Spring Boot, PostgreSQL, Thymeleaf, and Spring Security. The system centralizes IT asset tracking, assignments, ticketing, maintenance, and employee feedback, enhancing efficiency, accountability, and IT operations.**
 
 
 
@@ -53,7 +53,20 @@ ITAMS addresses common IT asset management challenges:
 * Delays in resolving technical issues
 * Manual and error-prone maintenance and vendor management
 
-**Solution:** A centralized platform for asset tracking, assignments, tickets, maintenance, and employee feedback.
+## 🚨 Problem
+  Organizations often face several challenges in managing IT assets:
+
+  *Assets can be lost, misplaced, or misused due to lack of centralized tracking
+  *It is difficult to know which employee is assigned which device, leading to accountability issues.
+  *Technical issues and maintenance requests are delayed, slowing down operations
+  *Manual processes for asset management, maintenance, and vendor coordination are error-prone and inefficient.
+
+**Solution:** ITAMS provides a centralized, secure, and automated platform to manage all IT asset operations. The system allows organizations to:
+    *Track the entire lifecycle of assets from procurement to retirement
+    *Assign assets to employees with full accountability and history tracking
+    *Manage tickets, maintenance, and vendor-related tasks efficiently to reduce downtime
+    *Collect employee feedback to improve IT services
+    *Replace manual processes with a streamlined, error-free workflow, improving efficiency, accountability, and operational control
 
 ---
 
