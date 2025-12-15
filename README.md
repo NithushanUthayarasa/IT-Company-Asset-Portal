@@ -21,7 +21,7 @@
 * [Add Asset](https://github.com/NithushanUthayarasa/IT-Company-Asset-Portal/blob/main/screenshots/Admin_Addasset.png)
 * [Add Assignment](https://github.com/NithushanUthayarasa/IT-Company-Asset-Portal/blob/main/screenshots/Admin_Addassignment.png)
 * [Pending Users](https://github.com/NithushanUthayarasa/IT-Company-Asset-Portal/blob/main/screenshots/Admin_PendingUsers.png)
-* [Debug Users](https://github.com/NithushanUthayarasa/IT-Company-Asset-Portal/blob/main/screenshots/Admin_debuguser.png)
+* [Debug Users](https://github.com/NithushanUthayarasa/IT-Company-Asset-Portal/blob/main/screenshots/Admin-DebugUser.png)
 
 
 ### 👨‍💻 Employee
